@@ -1,2 +1,2 @@
 # JavaFX-ProdajaWebPaketa
-JavaFX - MySQL - FXML - NetBeans
+JavaFX - MySQL - FXML - NetBeans- MVC
