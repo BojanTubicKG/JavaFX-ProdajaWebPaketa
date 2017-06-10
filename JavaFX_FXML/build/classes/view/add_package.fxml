@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="5.0" alignment="CENTER" fx:controller="controller.packageController">
+    <padding>
+        <Insets bottom="15.0" right="15.0" left="15.0" top="15.0"/>
+    </padding>
+    <children>
+        <Label text="Internet package">
+            <font>
+                <Font size="40.0"/>
+            </font>
+        </Label>
+        <Label text="SALES PACKAGE : " GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="7">
+            <font>
+                <Font size="20.0"/>
+            </font> 
+        </Label>
+        <GridPane hgap="5.0" vgap="5.0">
+            <children>
+
+                <Label text="First name : " GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+                <TextField fx:id="name" promptText="First name"  GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.columnSpan="5"/>
+                <Label text="Last name : " GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+                <TextField fx:id="lastname" promptText="Last name" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.columnSpan="5"/>
+                <Label text="Address : " GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
+                <TextField fx:id="address" promptText="Address" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.columnSpan="5"/>
+                <Label text="Speed : " GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1"/>
+                <RadioButton fx:id="2mbit" text="2 Mbit" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="1"> 
+                    <toggleGroup>
+                        <ToggleGroup fx:id="brzina"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="5mbit"  text="5 Mbit" mnemonicParsing="false"  toggleGroup="$brzina" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.columnSpan="1"/> 
+                <RadioButton fx:id="10mbit"  text="10 Mbit" mnemonicParsing="false"  toggleGroup="$brzina" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.columnSpan="1"/> 
+                <RadioButton fx:id="20mbit"  text="20 Mbit" mnemonicParsing="false"  toggleGroup="$brzina" GridPane.columnIndex="4" GridPane.rowIndex="4" GridPane.columnSpan="1"/> 
+                <RadioButton fx:id="50mbit"  text="50 Mbit" mnemonicParsing="false"  toggleGroup="$brzina" GridPane.columnIndex="5" GridPane.rowIndex="4" GridPane.columnSpan="1"/> 
+                <RadioButton fx:id="100mbit"  text="100 Mbit" mnemonicParsing="false"  toggleGroup="$brzina" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.columnSpan="1"/> 
+                
+                <Label text="Flow : " GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="1"/>
+                <RadioButton fx:id="1GB" text="1 GB" mnemonicParsing="false"  GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="1"> 
+                    <toggleGroup>
+                        <ToggleGroup fx:id="flow"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="5GB"  text="5 GB" mnemonicParsing="false"  toggleGroup="$flow" GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.columnSpan="1"/> 
+                <RadioButton fx:id="10GB"  text="10 GB" mnemonicParsing="false"  toggleGroup="$flow" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.columnSpan="1"/> 
+                <RadioButton fx:id="100GB"  text="100 GB" mnemonicParsing="false"  toggleGroup="$flow" GridPane.columnIndex="4" GridPane.rowIndex="5" GridPane.columnSpan="1"/> 
+                <RadioButton fx:id="1FLAT"  text="1 FLAT" mnemonicParsing="false"  toggleGroup="$flow" GridPane.columnIndex="5" GridPane.rowIndex="5" GridPane.columnSpan="2"/> 
+            
+                <Label text="Agreement : " GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+                <RadioButton fx:id="1year" text="1 Year" mnemonicParsing="false"  GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.columnSpan="2"> 
+                    <toggleGroup>
+                        <ToggleGroup fx:id="agreement"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="2year"  text="2 Year" mnemonicParsing="false"  toggleGroup="$agreement" GridPane.columnIndex="4" GridPane.rowIndex="6" GridPane.columnSpan="2"/> 
+            
+                <Button text="Save     " fx:id="saveBtn"  onAction="#savePackagee"  GridPane.columnIndex="5" GridPane.rowIndex="7" GridPane.columnSpan="1" GridPane.halignment="RIGHT"  />
+                <Button text="Clear     " fx:id="clearBtn" onAction="#clearPackage"  GridPane.columnIndex="6" GridPane.rowIndex="7" GridPane.columnSpan="1"  GridPane.halignment="RIGHT"/>
+            </children>
+        </GridPane>
+        <Label text="DELETE PACKAGE : " >
+            <font>
+                <Font size="20.0"/>
+            </font> 
+        </Label>
+        <HBox spacing="5" >
+            <children>
+                <Label text="ID package :"/>
+                <TextField fx:id="id" promptText="Id" />
+                <Button fx:id="deleteBtn" text="Delete" onAction="#deletePackagee" />
+            </children>           
+        </HBox>
+        <Label text="LIST PACKAGES : " >
+            <font>
+                <Font size="20.0"/>
+            </font> 
+        </Label>
+        <TextArea fx:id="lista" promptText="List packages..." editable="false" prefColumnCount="50" />
+        <HBox spacing="5.0" alignment="BOTTOM_RIGHT" >
+            <children>
+                <Button fx:id="listBtn" text="List packages" onAction="#listaPaketa" />
+                <Button fx:id="clearListBtn" text="Clear list" onAction="#clearLists" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

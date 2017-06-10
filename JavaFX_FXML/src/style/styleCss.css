@@ -1,0 +1,72 @@
+.root{
+    -fx-background-color:#373435;
+}
+.label{
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.text-field{
+    -fx-background-color:transparent;
+    -fx-border-color:#FFFFFF;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+.text-field:hover, .text-field:focused{
+    -fx-border-color:#75606F;
+}
+.text-area{
+    -fx-background-color:transparent;
+    -fx-border-color:#FFFFFF;
+    -fx-text-fill:#373435;
+    -fx-font-weight:bold;
+}
+.text-area:hover, .text-field:focused{
+    -fx-border-color:#75606F;
+}
+.radio-button{
+    -fx-text-fill:white; 
+    -fx-font-weight:bold;
+}
+#saveBtn, #clearBtn{
+    -fx-background-color:#545454;
+    -fx-border-color:#FFFFFF;
+    -fx-font-weight:bold;
+    -fx-font-size: 1.1em;
+    -fx-text-fill:#FFFFFF;
+}
+#saveBtn:hover, #clearBtn:hover{
+    -fx-border-color:#75606F;
+    -fx-background-color:lightslategray;
+}
+#saveBtn:pressed, #clearBtn:pressed{
+    -fx-border-color:#75606F;
+    -fx-background-color:darkgray;
+}
+#deleteBtn{
+    -fx-font-weight:bold; 
+}
+#deleteBtn:hover{
+    -fx-border-color:#75606F;
+    -fx-background-color:darkgray;
+}
+#deleteBtn:pressed{
+    -fx-border-color:#75606F;
+    -fx-background-color:#D3D3D3; 
+}
+#listBtn, #clearListBtn{
+    -fx-background-color:#BEBEBE;
+    -fx-border-color:#FFFFFF;
+    -fx-font-weight:bold;
+    -fx-font-size: 1.1em;
+    -fx-text-fill:#373435;
+}
+
+#listBtn:hover, #clearListBtn:hover{
+    -fx-border-color:#75606F;
+    -fx-background-color:#9FB6CD;
+}
+#listBtn:pressed, #clearListBtn:pressed{
+    -fx-border-color:#75606F;
+    -fx-background-color:#FFFFFF;
+}
